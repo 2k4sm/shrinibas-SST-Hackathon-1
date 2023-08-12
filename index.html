@@ -21,17 +21,17 @@
         
         <ul class="search-results">
           <li class="Movies">
+            <img class="article-image" src="{{ .Movies.Poster }}" />
             <div>
-                <h3 class="title">{{ .Movies.Title }}</h3>
-                <h3 class="title">{{ .Movies.Year }}</h3>
-                <h3 class="title">{{ .Movies.Plot }}</h3>
-                <h3 class="title">{{ .Movies.Genre }}</h3>
-                <h3 class="title">{{ .Movies.Director }}</h3>
-                <h3 class="title">{{ .Movies.Type }}</h3>
-                <h3 class="title">{{ .Movies.ImdbRating }}</h3>
+                <p class="title">{{ .Movies.Title }}</p>
+                <p class="year">{{ .Movies.Year }}</p>
+                <p class="plot">{{ .Movies.Plot }}</p>
+                <p class="genre">{{ .Movies.Genre }}</p>
+                <p class="director">{{ .Movies.Director }}</p>
+                <p class="type">{{ .Movies.Type }}</p>
+                <p class="rating">{{ .Movies.ImdbRating }}</p>
               
             </div>
-            <img class="article-image" src="{{ .Movies.Poster }}" />
           </li>
         </ul>
       </section>
