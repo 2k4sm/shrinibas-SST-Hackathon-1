@@ -1,12 +1,3 @@
 body{
-    margin: 0px;
-}
-header{
-    display: flex;
-    justify-content: space-between;
-    
-}
-section{
-    background-color: aqua;
-
+    background-color: red;
 }

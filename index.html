@@ -8,29 +8,29 @@
     <title>Movie Listing</title>
 </head>
 <body>
-    <section>
-        <header>
-            <a class="app-name" href="/">MOVIEHUB</a>
-            <form action="/search" method="GET">
-                <input class="search-input" value="{{.Query}}" placeholder="Enter the Movie to search" type="search" name="squery"/>
-            </form>
-            <a href="https://github.com/2k4sm/shrinibas-SST-Hackathon-1">View on Github</a>
-        </header>
-    </section>
-    <section class="results">
-            <img class="article-image" src="{{ .Movies.Poster }}" />
-            <div>
-                <p class="title">{{ .Movies.Title }}</p>
-                <p class="year">{{ .Movies.Year }}</p>
-                <p class="plot">{{ .Movies.Plot }}</p>
-                <p class="genre">{{ .Movies.Genre }}</p>
-                <p class="director">{{ .Movies.Director }}</p>
-                <p class="type">{{ .Movies.Type }}</p>
-                <p class="rating">{{ .Movies.ImdbRating }}</p>
-              
-            </div>
-      </section>
-    
-    
+    <main>
+        <section class="header">
+            <header>
+                <a class="app-name" href="/">MOVIEHUB</a>
+                <form action="/search" method="GET">
+                    <input class="search-input" value="{{.Query}}" placeholder="Enter the Movie to search" type="search" name="squery"/>
+                </form>
+                <a href="https://github.com/2k4sm/shrinibas-SST-Hackathon-1">View on Github</a>
+            </header>
+        </section>
+        <section class="results">
+                <img class="article-image" src="{{ .Movies.Poster }}" />
+                <div>
+                    <p class="title">{{ .Movies.Title }}</p>
+                    <p class="year">{{ .Movies.Year }}</p>
+                    <p class="plot">{{ .Movies.Plot }}</p>
+                    <p class="genre">{{ .Movies.Genre }}</p>
+                    <p class="director">{{ .Movies.Director }}</p>
+                    <p class="type">{{ .Movies.Type }}</p>
+                    <p class="rating">{{ .Movies.ImdbRating }}</p>
+                
+                </div>
+        </section>
+    </main>
 </body>
 </html>
