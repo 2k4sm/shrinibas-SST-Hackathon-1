@@ -17,7 +17,7 @@ import (
 var tpl = template.Must(template.ParseFiles("index.html"))
 
 type Search struct {
-	Query string
+	Query  string
 	Movies *moviedb.Movies
 }
 
