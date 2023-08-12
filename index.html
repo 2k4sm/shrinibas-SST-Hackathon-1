@@ -12,10 +12,30 @@
         <header>
             <a class="app-name" href="/">MOVIEHUB</a>
             <form action="/search" method="GET">
-                <input class="search-input" value="" placeholder="Enter the Movie to search" type="search" name="squery"/>
+                <input class="search-input" value="{{.Query}}" placeholder="Enter the Movie to search" type="search" name="squery"/>
             </form>
             <a href="https://github.com/2k4sm/shrinibas-SST-Hackathon-1">View on Github</a>
         </header>
     </section>
+    <section class="container">
+        
+        <ul class="search-results">
+          <li class="Movies">
+            <div>
+                <h3 class="title">{{ .Movies.Title }}</h3>
+                <h3 class="title">{{ .Movies.Year }}</h3>
+                <h3 class="title">{{ .Movies.Plot }}</h3>
+                <h3 class="title">{{ .Movies.Genre }}</h3>
+                <h3 class="title">{{ .Movies.Director }}</h3>
+                <h3 class="title">{{ .Movies.Type }}</h3>
+                <h3 class="title">{{ .Movies.ImdbRating }}</h3>
+              
+            </div>
+            <img class="article-image" src="{{ .Movies.Poster }}" />
+          </li>
+        </ul>
+      </section>
+    
+    
 </body>
 </html>

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
 	"html/template"
 	"log"
@@ -14,6 +15,11 @@ import (
 )
 
 var tpl = template.Must(template.ParseFiles("index.html"))
+
+type Search struct {
+	Query string
+	Movies *moviedb.Movies
+}
 
 func main() {
 	err := godotenv.Load()
@@ -45,7 +51,13 @@ func main() {
 }
 
 func indexHandler(w http.ResponseWriter, r *http.Request) {
-	tpl.Execute(w, nil)
+	buf := &bytes.Buffer{}
+	err := tpl.Execute(buf, nil)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	buf.WriteTo(w)
 }
 
 func searchHandler(movieapi *moviedb.Client) http.HandlerFunc {
@@ -66,6 +78,19 @@ func searchHandler(movieapi *moviedb.Client) http.HandlerFunc {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
 		}
+
+		search := &Search{
+			Query:  searchQuerry,
+			Movies: results,
+		}
+
+		buf := &bytes.Buffer{}
+		err = tpl.Execute(buf, search)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+		buf.WriteTo(w)
 		fmt.Printf("%+v", results)
 
 	}
