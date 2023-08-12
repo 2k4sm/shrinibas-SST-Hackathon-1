@@ -2,7 +2,6 @@ package main
 
 import (
 	"bytes"
-	"fmt"
 	"html/template"
 	"log"
 	"net/http"
@@ -91,7 +90,7 @@ func searchHandler(movieapi *moviedb.Client) http.HandlerFunc {
 			return
 		}
 		buf.WriteTo(w)
-		fmt.Printf("%+v", results)
+		//fmt.Printf("%+v", results)
 
 	}
 
