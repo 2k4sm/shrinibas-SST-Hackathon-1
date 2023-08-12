@@ -1,3 +1,77 @@
 body{
-    background-color: red;
+    margin: 0px;
+}
+
+.header{
+    background-color: rgb(136, 164, 190);
+    font-family: monospace;
+    font-size: 2rem;
+
+    
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+a{
+    padding: 5px 5px 10px;
+    background-color: rgb(21, 58, 75);
+    border-radius: 12px;
+    margin: 5px;
+}
+a{
+    text-decoration: none;
+    color: rgb(136, 164, 190);
+}
+
+input{
+    border: 2px solid rgb(58, 178, 182);
+    border-radius: 5px;
+    padding-left: 10em;
+    padding-right: 10em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: rgb(42, 109, 139);
+
+
+}
+.github-logo{
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    margin: 10px;
+}
+form input{
+    font-family: monospace;
+    font-size: 1rem;
+    color: azure;
+    text-align: center;
+}
+
+.results{
+    display: flex;
+}
+.article-image{
+    border: 2px solid rgb(58, 178, 182);
+    margin: 5px;
+    border-radius: 5px;
+}
+.content{
+    border: 2px solid rgb(58, 178, 182);
+    margin: 5px;
+    background-color: beige;
+    border-radius: 5px;
+    text-align: center;
+}
+
+p{
+    border: 2px solid rgb(58, 178, 182);
+    margin: 5px;
+    height: 100px;
+    align-items: center;
+    background-color: burlywood;
+    border-radius: 12px;
 }

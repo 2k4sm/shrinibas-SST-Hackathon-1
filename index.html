@@ -8,29 +8,29 @@
     <title>Movie Listing</title>
 </head>
 <body>
-    <main>
-        <section class="header">
-            <header>
-                <a class="app-name" href="/">MOVIEHUB</a>
-                <form action="/search" method="GET">
-                    <input class="search-input" value="{{.Query}}" placeholder="Enter the Movie to search" type="search" name="squery"/>
-                </form>
-                <a href="https://github.com/2k4sm/shrinibas-SST-Hackathon-1">View on Github</a>
-            </header>
-        </section>
-        <section class="results">
-                <img class="article-image" src="{{ .Movies.Poster }}" />
-                <div>
-                    <p class="title">{{ .Movies.Title }}</p>
-                    <p class="year">{{ .Movies.Year }}</p>
-                    <p class="plot">{{ .Movies.Plot }}</p>
-                    <p class="genre">{{ .Movies.Genre }}</p>
-                    <p class="director">{{ .Movies.Director }}</p>
-                    <p class="type">{{ .Movies.Type }}</p>
-                    <p class="rating">{{ .Movies.ImdbRating }}</p>
-                
-                </div>
-        </section>
-    </main>
+    <section class="header">
+        <header>
+            <a class="app-name" href="/">MOVIEHUB</a>
+            <form action="/search" method="GET">
+                <input class="search-input" value="{{.Query}}" placeholder="Search" type="search" name="squery"/>
+            </form>
+            <a class="img`" href="https://github.com/2k4sm/shrinibas-SST-Hackathon-1">
+                <img class="github-logo" src="/assets/github-mark.png">
+            </a>
+        </header>
+    </section>
+    <section class="results">
+            <img class="article-image" src="{{ .Movies.Poster }}" />
+            <div class="content">
+                <p class="title">Title: {{ .Movies.Title }}</p>
+                <p class="year">Year: {{ .Movies.Year }}</p>
+                <p class="plot">Plot: {{ .Movies.Plot }}</p>
+                <p class="genre">Genre: {{ .Movies.Genre }}</p>
+                <p class="director">Director: {{ .Movies.Director }}</p>
+                <p class="type">Type: {{ .Movies.Type }}</p>
+                <p class="rating">IMDB: {{ .Movies.ImdbRating }}</p>
+            
+            </div>
+    </section>
 </body>
 </html>
