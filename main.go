@@ -2,6 +2,7 @@ package main
 
 import (
 	"bytes"
+	"encoding/json"
 	"html/template"
 	"log"
 	"net/http"
@@ -41,8 +42,8 @@ func main() {
 	movieapi := moviedb.NewClient(myClient, apikey)
 
 	mux := http.NewServeMux()
-	fs := http.FileServer(http.Dir("assets"))
-	mux.Handle("/assets/", http.StripPrefix("/assets/", fs))
+	//fs := http.FileServer(http.Dir("assets"))
+	//mux.Handle("/assets/", http.StripPrefix("/assets/", fs))
 	mux.HandleFunc("/search", searchHandler(movieapi))
 	mux.HandleFunc("/", indexHandler)
 	http.ListenAndServe(":"+port, mux)
@@ -77,20 +78,7 @@ func searchHandler(movieapi *moviedb.Client) http.HandlerFunc {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
 		}
-
-		search := &Search{
-			Query:  searchQuerry,
-			Movies: results,
-		}
-
-		buf := &bytes.Buffer{}
-		err = tpl.Execute(buf, search)
-		if err != nil {
-			http.Error(w, err.Error(), http.StatusInternalServerError)
-			return
-		}
-		buf.WriteTo(w)
-		//fmt.Printf("%+v", results)
+		json.NewEncoder(w).Encode(results)
 
 	}
 
