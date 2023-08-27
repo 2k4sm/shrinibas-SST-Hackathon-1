@@ -42,8 +42,6 @@ func main() {
 	movieapi := moviedb.NewClient(myClient, apikey)
 
 	mux := http.NewServeMux()
-	//fs := http.FileServer(http.Dir("assets"))
-	//mux.Handle("/assets/", http.StripPrefix("/assets/", fs))
 	mux.HandleFunc("/search", searchHandler(movieapi))
 	mux.HandleFunc("/", indexHandler)
 	http.ListenAndServe(":"+port, mux)
