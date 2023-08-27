@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/styles.css">
+    <link rel="stylesheet" href="./styles.css">
     <title>Movie Listing</title>
 </head>
 <body>
@@ -14,14 +14,11 @@
             <form action="/search" method="GET">
                 <input class="search-input" value="{{.Query}}" placeholder="Search" type="search" name="squery"/>
             </form>
-            <a class="img`" href="https://github.com/2k4sm/shrinibas-SST-Hackathon-1">
-                <img class="github-logo" src="/assets/github-mark.png">
-            </a>
         </header>
     </section>
     <section class="results">
             <h1>This returns an json response use curl to intercept it.</h1>
-            
+            <h1>search Paths use:/search?squery=<strong>MovieName</strong> To search for movies</h1>
     </section>
 </body>
 </html>
