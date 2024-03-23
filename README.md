@@ -1,28 +1,101 @@
-# shrinibas-SST-Hackathon-1
+<p align="center">
+  <img src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/ec559a9f6bfd399b82bb44393651661b08aaf7ba/icons/folder-markdown-open.svg" width="100" alt="project-logo">
+</p>
+<p align="center">
+    <h1 align="center">SHRINIBAS-SST-HACKATHON-1</h1>
+</p>
+<p align="center">
+    <em><code>► INSERT-TEXT-HERE</code></em>
+</p>
+<p align="center">
+	<img src="https://img.shields.io/github/last-commit/2k4sm/shrinibas-SST-Hackathon-1?style=default&logo=git&logoColor=white&color=0080ff" alt="last-commit">
+	<img src="https://img.shields.io/github/languages/top/2k4sm/shrinibas-SST-Hackathon-1?style=default&color=0080ff" alt="repo-top-language">
+	<img src="https://img.shields.io/github/languages/count/2k4sm/shrinibas-SST-Hackathon-1?style=default&color=0080ff" alt="repo-language-count">
+<p>
+<p align="center">
+	<!-- default option, no dependency badges. -->
+</p>
 
-## Motive of this Project.
-- To Understand the process of designing and implementing a backend service.
-- To explore json encoding and decoding using golang.
-- To explore how APIs work.
-- Explore the http request response cycle.
-- Explored html templating.(But not used in this project.)
+<br><!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary><br>
 
-### Key Takeaways 
-- Explored web designing principles.
-- Explored creating custom structs to work with data.
-- Explored the json and http Standard library of go.
-- Explored working of  APIs.
+- [ Overview](#-overview)
+- [ Repository Structure](#-repository-structure)
+- [ Getting Started](#-getting-started)
+  - [ Installation](#-installation)
+  - [ Tests](#-tests)
+- [ Project Roadmap](#-project-roadmap)
+</details>
+<hr>
 
+##  Overview
+
+<code>► Movie Search API.</code>
+
+##  Repository Structure
+
+```sh
+└── shrinibas-SST-Hackathon-1/
+    ├── .github
+    │   └── workflows
+    ├── LICENSE
+    ├── README.md
+    ├── go.mod
+    ├── go.sum
+    ├── index.html
+    ├── main.go
+    ├── moviedb
+    │   └── moviedb.go
+    ├── shrinibas-SST-Hackathon-1
+    ├── styles.css
+    └── tmp
+        ├── build-errors.log
+        └── main
+```
+
+##  Getting Started
+
+**System Requirements:**
+
+* **Go**: `version 1.16.*`
+
+###  Installation
+
+<h4>From <code>source</code></h4>
+
+> 1. Clone the movieAPI:
+>
+> ```console
+> $ git clone https://github.com/2k4sm/movieAPI
+> ```
+>
+> 2. Change to the project directory:
+> ```console
+> $ cd movieAPI
+> ```
+>
+> 3. Install the dependencies:
+> ```console
+> $ go build -o myapp
+> ```
+> 4. Run movieAPI using the command below:
+> ```console
+> $ ./myapp
+> ```
+
+###  Tests
+
+> Run the test suite using the command below:
+> ```console
+> $ go test
+> ```
 ---
-### How to use:
-- Use the link to [shrinibas-SST=Hackathon-1](https://shrinibas-sst-hackathon-1.onrender.com/) to view a the webpage having a search field.
-- Use the search field to search for a movie name.
-- The server returns a json response to the client.
-- The response is displayed on the screen as a json response.(Sorry for bad Frontend.).
 
-## What I have created ?
-- I have created a back-end server using go-lang which uses search Query for a  movie and fetches The Movie and its details from the  OMDB api and returns back as a json response to the client.
+##  Project Roadmap
 
----
+- [X] `► Creates Movie Search.`
+- [ ] `► Use svelte to create a list view of all movies.`
+- [ ] `► create a track for previously watched movies,watch list and favourites.`
 
-### By- Shrinibas Mahanta
+# Thanks for using movieSearch.
